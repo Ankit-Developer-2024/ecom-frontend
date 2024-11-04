@@ -62,7 +62,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: `/order-success/${currentOrder.id}`,
+        return_url: `https://ecom-backend-xi-seven.vercel.app/order-success/${currentOrder.id}`,
       }, 
     });
     // This point will only be reached if there is an immediate error when
