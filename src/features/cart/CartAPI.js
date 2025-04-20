@@ -56,8 +56,8 @@ export  function deleteItemToCart(itemId) {
       method:"DELETE",
       headers:{"content-type":"application/json"}
     })
-     const data=response.json();
-     resolve({data:{id:itemId}});
+     const data=await response.json();
+     resolve({data:{id:data.id}});
   }
   catch(e){
     console.log("api error",e); 

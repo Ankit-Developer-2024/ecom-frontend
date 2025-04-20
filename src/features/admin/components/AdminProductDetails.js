@@ -56,7 +56,6 @@ export default function AdminProductDetails() {
           <div className="pt-6">
             <nav aria-label="Breadcrumb">
               <ol
-                role="list"
                 className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8"
               >
                 <li key={product.id}>
@@ -287,7 +286,7 @@ export default function AdminProductDetails() {
                   <h2 className="text-sm font-medium text-gray-900">Highlights</h2>
 
                   <div className="mt-4 ">
-                    <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
+                    <ul  className="list-disc space-y-2 pl-4 text-sm">
                     {   product.highlights.map((highlight)=>(
                         <li key={highlight} className="text-gray-400">
                           <span className="text-gray-600">{highlight}</span>

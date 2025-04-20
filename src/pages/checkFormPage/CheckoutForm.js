@@ -49,7 +49,7 @@ export default function CheckoutForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    
     if (!stripe || !elements) {
       // Stripe.js hasn't yet loaded.
       // Make sure to disable form submission until Stripe.js has loaded.
@@ -60,7 +60,7 @@ export default function CheckoutForm() {
     
     const { error } = await stripe.confirmPayment({
       elements,
-      confirmParams: {
+      confirmParams: { 
         // Make sure to change this to your payment completion page
         return_url: `https://ecom-backend-xi-seven.vercel.app/order-success/${currentOrder.id}`,
       }, 

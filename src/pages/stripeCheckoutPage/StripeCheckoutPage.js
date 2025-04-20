@@ -14,8 +14,6 @@ const stripePromise = loadStripe("pk_test_51OInnWSDwjbP5yp8BY9DUmKBGC7WteAnddAOI
 export default function StripeCheckoutPage() {
   const [clientSecret, setClientSecret] = useState("");
   const currentOrder=useSelector(selectcurrentOrder) 
-
-  console.log("curr",currentOrder);
   
 
   useEffect(() => {
@@ -35,7 +33,7 @@ export default function StripeCheckoutPage() {
         setClientSecret(data.clientSecret);
         // [DEV] For demo purposes only
       });
-  }, []);
+  }, [currentOrder.totalAmount,currentOrder.id]);
 
   const appearance = {
     theme: 'stripe',

@@ -1,5 +1,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { Bars3Icon,ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon,ShoppingCartIcon,  UserIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { selectItems } from '../cart/CartSlice'
@@ -39,7 +39,7 @@ function classNames(...classes) {
                     <img
                       alt="Your Company"
                       src="/logo2.png"
-                      className="h-8 w-8"
+                      className="h-8 w-8 rounded-full"
                     />
                     </Link>
                   </div>
@@ -86,7 +86,7 @@ function classNames(...classes) {
                         <MenuButton className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                           <span className="absolute -inset-1.5" />
                           <span className="sr-only">Open userInfo menu</span>
-                          <img alt="" src={userInfo.imageUrl} className="h-8 w-8 rounded-full" />
+                          <div className=' hover:border-2 hover:p-1 hover:rounded-full'> <UserIcon aria-hidden="true" className="h-6 w-6 rounded-full  text-white" /></div>
                         </MenuButton>
                       </div>
                       <MenuItems

@@ -71,7 +71,7 @@ export default function AdminOrders() {
     <>
       <div>
         <div className="overflow-x-auto">
-          <div className=" bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
+          <div className=" bg-gray-100 flex items-center justify-center font-sans overflow-hidden">
             <div className="w-full ">
               <div className="bg-white shadow-md rounded my-6">
                 <table className="min-w-max w-full table-auto">
@@ -111,13 +111,14 @@ export default function AdminOrders() {
                                 <span className="font-medium">
                                   {order.id}
                                 </span>
-                              </div>
+                              </div>  
                             </td>
                             <td className="py-3 px-2 text-left">
                              {order.items.map((item)=><div key={item.id}  className="flex items-center">
                                 <div className="mr-2">
                                   <img
                                     className="w-6 h-6 rounded-full"
+                                    alt="thumbnail"
                                     src={item.product.thumbnail}
                                   />
                                 </div>
